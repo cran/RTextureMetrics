@@ -1,0 +1,17 @@
+e9e61b99ff806999d5068f7749fcb32b *DESCRIPTION
+df390c53434517b304ac5db487184641 *NAMESPACE
+cb8d45ac42ae2d48ff158dbf09918da9 *R/calcASM.R
+e3aede1f08b9b87401dbb798a25aaaa5 *R/calcCON.R
+9e4cf10c23b32f51f23ccde0dde18901 *R/calcDIS.R
+89cb0b3b7153e8ad1c90013d339aeddc *R/calcENT.R
+95b87f72c60af025a618ab1682bafc0b *R/calcHOM.R
+3826039e6869fa0c0a6e9acde497b46e *R/findMaxPropability.R
+06f7b124ae7cbd5c25a4ffb4dada367f *R/genGLCM.R
+08d01dc3483ae294b4c75a451e68a4eb *man/RTextureMetrics-package.Rd
+e20cc2429a048c4b28bd60e334d7fc9b *man/calcASM.Rd
+313b411dda0c17fd550f80b61a44e355 *man/calcCON.Rd
+e0558c6f35b0dc4b0b54e181b8e03b3b *man/calcDIS.Rd
+398a5b02c12d8c898b742c78706395bc *man/calcENT.Rd
+7152bbe487ebbc650d6fbd2e1dc41455 *man/calcHOM.Rd
+3f88989101adafbfc942bab2fae182d6 *man/findMaxPropability.Rd
+cf5e444d6d7ac483ff53d532b2299ca1 *man/genGLCM.Rd
