@@ -14,8 +14,8 @@ This package contains several functions for calculation of important texture met
 \tabular{ll}{
 Package: \tab RTextureMetrics\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2013-12-23\cr
+Version: \tab 1.1\cr
+Date: \tab 2013-04-18\cr
 License: \tab GPL (>=2)\cr
 LazyLoad: \tab yes\cr
 }
@@ -47,4 +47,5 @@ calcDIS(GLCM)
 calcASM(GLCM)
 calcENT(GLCM)
 findMaxPropability(GLCM)
+plotGLCM(GLCM)
 }

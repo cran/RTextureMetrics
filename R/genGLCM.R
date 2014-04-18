@@ -1,41 +1,38 @@
 genGLCM <-
 function(direction, distance, rawmat)
 {
-   #distance: 1=east(right)  2=south(down)  3=west(left)  4=north(up)
-   number_coloums<-max(rawmat)+1
-   number_rows   <-max(rawmat)+1
-
-   #generate new GLCM-Matrix after calculation of size of GLCM
-   #GLCM<-matrix(0, ncol=number_coloums, nrow=number_rows) 
+   #direction: 1=east(right)  2=south(down)  3=west(left)  4=north(up)
+  
+   #generate new GLCM-Matrix after calculation of size of GLCM 
    GLCM<-matrix(0, ncol=255, nrow=255) 
    (GLCM)
 
    #count occurrences and fill the matrix
    if(direction==1)   ### east-calculation
    {
-     for(i in 1:number_coloums-1)   #for all coloumns 
+     for(i in 1:dim(rawmat)[2]-distance)   #for all coloumns: -distance because of direction east 
      {
-         for(a in 1:number_rows)    #for all rows
+         for(a in 1:dim(rawmat)[1])        #for all rows
          {        
-            GLCM[rawmat[a,i]+1,rawmat[a,i+1]+1]<-GLCM[rawmat[a,i]+1,rawmat[a,i+1]+1]+1
+            GLCM[rawmat[a,i],rawmat[a,i+distance]]<-GLCM[rawmat[a,i],rawmat[a,i+distance]]+1
          } 
      }#eo for 
    }#eo east calculation 
 
    if(direction==2)   ### south-calculation
    {
-     for(i in 1:number_coloums)   #for all coloumns 
+     for(i in 1:dim(rawmat)[1]-distance)   #for all row: -distance because of direction south 
      {
-         for(a in 1:number_rows-1)    #for all rows
+         for(a in 1:dim(rawmat)[2])        #for all coloumns
          {        
-            GLCM[rawmat[a,i]+1,rawmat[a+1,i]+1]<-GLCM[rawmat[a,i]+1,rawmat[a+1,i]+1]+1
+            GLCM[rawmat[a,i+distance],rawmat[a,i]]<-GLCM[rawmat[a,i+distance],rawmat[a,i]]+1
          } 
      }#eo for 
-   }#eo east calculation 
+   }#eo south calculation 
 
    #add the matrix to its transponse to make it symmetrical
    transGLCM<-t(GLCM)
-   print("INVERTIERT")
+   print("GLCM generation succesful")
    GLCM<-GLCM+transGLCM
 
    #normalize the matrix to turn it into probabilities
